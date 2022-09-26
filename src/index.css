@@ -1,3 +1,37 @@
 body {
+  margin: 0;
   font-family: "Poppins", sans-serif;
+  color: white;
+  background-image: url(img/nathon-oski-EW_rqoSdDes-unsplash.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(9, 6, 1, 0.5);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  padding: 5px;
+  display: inline;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: lightgray;
+}
+
+h1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.toptext {
+  position: absolute;
 }
