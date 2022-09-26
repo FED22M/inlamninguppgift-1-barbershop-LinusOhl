@@ -2,18 +2,21 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: white;
-  background-image: url(img/nathon-oski-EW_rqoSdDes-unsplash.jpg);
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(9, 6, 1, 0.5);
+  background-color: rgba(70, 70, 70, 0.2);
+}
+
+.topimage {
+  background-image: url(img/bg-75.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 nav {
