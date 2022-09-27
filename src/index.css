@@ -9,11 +9,13 @@ body {
   background-size: cover;
 }
 
+/* Header CSS */
+
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(70, 70, 70, 0.2);
+  background-color: rgba(23, 23, 23, 0.2);
 }
 
 nav {
@@ -28,11 +30,27 @@ li {
   color: lightgray;
 }
 
+a:link {
+  text-decoration: none;
+  color: lightgray;
+}
+
+a:visited {
+  color: lightgray;
+}
+
+a:hover,
+a:active {
+  color: rgb(191, 146, 91);
+}
+
 h1,
 h2,
 h3 {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
+
+/* Welcome CSS */
 
 .toptext {
   position: absolute;
@@ -71,4 +89,51 @@ span {
   font-family: "Barlow Semi Condensed", sans-serif;
   color: rgb(191, 146, 91);
   border: 2px solid rgb(191, 146, 91);
+}
+
+.learn-more-box a {
+  color: rgb(191, 146, 91);
+}
+
+/* Services CSS */
+
+.services-item1 {
+  background-color: rgb(210, 165, 111);
+  grid-area: hairstyles;
+}
+.services-item2 {
+  grid-area: beardtrim;
+}
+.services-item3 {
+  background-color: rgb(210, 165, 111);
+  grid-area: hotshave;
+}
+.services-item4 {
+  grid-area: hairshampoo;
+}
+
+.services-container {
+  position: relative;
+  top: 700px;
+  display: grid;
+  grid-template-areas: "hairstyles beardtrim hotshave hairshampoo";
+  background-color: rgb(191, 146, 91);
+}
+
+.services-container > div {
+  text-align: center;
+  padding: 2em;
+}
+
+.services-container h2 {
+  font-family: "Poppins", sans-serif;
+  margin-top: -3em;
+}
+
+.services-container img {
+  position: relative;
+  top: -100px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
 }
