@@ -33,6 +33,7 @@ a:visited {
 a:hover,
 a:active {
   color: rgb(191, 146, 91);
+  background-color: rgba(140, 140, 140, 0.2);
 }
 
 h1,
