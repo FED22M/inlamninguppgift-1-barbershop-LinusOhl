@@ -3,8 +3,6 @@ body {
   font-family: "Poppins", sans-serif;
   color: white;
   background-image: url(img/bg-75.jpg);
-  height: 100vh;
-  width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,18 +11,10 @@ body {
 /* Header CSS */
 
 header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: rgba(23, 23, 23, 0.2);
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-}
-
-li {
+header li {
   padding-right: 35px;
   display: inline;
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -51,13 +41,47 @@ h3 {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
-/* Welcome CSS */
+.header-section {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  justify-content: space-around;
+}
 
-.toptext {
-  position: absolute;
-  width: 700px;
-  margin-top: 100px;
-  left: 50%;
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Grid Main CSS */
+
+.grid-main {
+  display: grid;
+  grid-template-areas:
+    "welcome-section"
+    "services-section"
+    "about-section"
+    "extra-section";
+}
+
+/* Welcome Section CSS */
+
+.welcome-section {
+  grid-area: "welcome-section";
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.welcome-side-left {
+  grid-area: "welcome-side-left";
+}
+
+.welcome-side-right {
+  grid-area: "welcome-side-right";
+  margin-right: 100px;
 }
 
 .welcome {
@@ -72,7 +96,7 @@ h3 {
   font-size: 4em;
 }
 
-span {
+.welcome-section span {
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
@@ -96,72 +120,229 @@ span {
   color: rgb(191, 146, 91);
 }
 
-/* Services CSS */
+/* Services Section CSS */
 
-.services-item1 {
-  background-color: rgb(210, 165, 111);
-  grid-area: hairstyles;
-}
-.services-item2 {
-  grid-area: beardtrim;
-}
-.services-item3 {
-  background-color: rgb(210, 165, 111);
-  grid-area: hotshave;
-}
-.services-item4 {
-  grid-area: hairshampoo;
-}
-
-.services-container {
-  position: absolute;
-  top: 750px;
+.services-section {
+  grid-area: "services-section";
   display: grid;
-  grid-template-areas: "hairstyles beardtrim hotshave hairshampoo";
   background-color: rgb(191, 146, 91);
-}
-
-.services-container > div {
+  margin-top: 220px;
   text-align: center;
-  padding: 2em;
 }
 
-.services-container h2 {
-  font-family: "Poppins", sans-serif;
-  margin-top: -3em;
+.services-light {
+  grid-area: "services-light";
+  background-color: rgb(210, 165, 111);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
 }
 
-.services-container img {
-  position: relative;
-  top: -100px;
+.services-dark {
+  grid-area: "services-dark";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.services-light {
+  grid-area: "services-light";
+  background-color: rgb(210, 165, 111);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.services-dark {
+  grid-area: "services-dark";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.services-section img {
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
-/* About CSS */
+.services-section h2 {
+  font-family: "Poppins", sans-serif;
+}
 
-.about-container {
+/* About Section CSS */
+
+.about-section {
+  grid-area: "about-section";
+  background-color: white;
   display: grid;
-  /* position: absolute;
-  top: 900px; */
 }
 
-.about-container img {
-  height: 800px;
-  width: 200px;
+.about-side-left {
+  grid-area: "about-text1";
 }
 
-/* Media Queries */
+.about-side-left img {
+  width: 60%;
+  height: 100%;
+  margin-left: 100px;
+}
+
+.about-side-right {
+  grid-area: "about-text2";
+  color: rgb(90, 90, 90);
+}
+
+.about-side-right h2 {
+  color: rgb(191, 146, 91);
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.about-side-right h3 {
+  color: rgb(43, 43, 43);
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.about-side-right p {
+  width: 500px;
+}
+
+.about-side-right span {
+  font-size: 2em;
+}
+
+.about-text-box {
+  background-color: rgb(191, 146, 91);
+  color: white;
+  padding: 10px;
+  margin-top: 25px;
+  width: 250px;
+}
+
+/* Extra Section CSS */
+
+.extra-section {
+  grid-area: "extra-section";
+  background-color: rgb(234, 234, 234);
+}
+
+.extra-container {
+  text-align: center;
+}
+
+.extra-container h2 {
+  margin-top: 100px;
+  margin-bottom: 0;
+  color: rgb(191, 146, 91);
+  font-size: 1em;
+}
+
+.extra-container h3 {
+  color: rgb(43, 43, 43);
+  font-size: 4em;
+  margin-top: 0;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.review {
+  background-color: white;
+  color: rgb(90, 90, 90);
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 100px;
+}
+
+.review-person-name {
+  font-size: 2em;
+  color: rgb(43, 43, 43);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.review-customer {
+  color: rgb(191, 146, 91);
+  margin-top: 0;
+}
+
+.review-person img {
+  margin-top: 10px;
+  border-radius: 50%;
+  width: 20%;
+}
+
+/* Footer CSS */
+
+footer {
+  background-color: rgb(19, 19, 19);
+}
+
+.footer-section {
+  display: grid;
+  gap: 40px;
+  padding: 10px;
+}
+
+.footer-item ul {
+  padding-left: 1em;
+}
+
+.footer-item li {
+  color: rgb(140, 140, 140);
+}
+
+.footer-item p {
+  color: rgb(140, 140, 140);
+}
 
 @media only screen and (max-width: 700px) {
-  .services-container {
-    grid-template-areas:
-      "hairstyles beardtrim"
-      "hotshave hairshampoo";
+  .services-section {
+    grid-template-rows: auto auto auto auto;
   }
 
-  .services-container img {
-    top: none;
+  .about-section {
+    grid-template-rows: auto auto;
+  }
+
+  .about-side-right h3 {
+    font-size: 2em;
+  }
+
+  .footer-section {
+    grid-template-rows: auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .services-section {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .services-section img {
+    position: relative;
+    top: -50px;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-side-right h3 {
+    font-size: 4em;
+  }
+
+  .footer-section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
